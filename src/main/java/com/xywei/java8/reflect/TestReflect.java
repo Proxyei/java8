@@ -12,6 +12,7 @@ import org.junit.Test;
  * @author wodoo
  *
  */
+@SuppressWarnings("all")
 public class TestReflect {
 
 	/**
