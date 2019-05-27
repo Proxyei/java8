@@ -26,7 +26,7 @@ public class UserServiceImplProxyHandler implements InvocationHandler {
 	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
+		// 有个BUG
 		Object object = null;
 
 		if ("haveDinner".equals(method.getName())) {
@@ -40,6 +40,11 @@ public class UserServiceImplProxyHandler implements InvocationHandler {
 			System.out.println("睡觉前一定要关灯;");
 			object = method.invoke(userService, args);
 			System.out.println("好好睡觉");
+		}
+
+		if (object == null) {
+			// 不进行任何操作
+			return method.invoke(userService, args);
 		}
 
 		return object;

@@ -20,6 +20,8 @@ public class TestProxy_jdk {
 		// 代理对象执行方法
 		userServiceProxy.haveDinner();
 		userServiceProxy.goSleep();
+		System.out.println("下面刷牙不做任何事情");
+		userServiceProxy.getup();
 	}
 
 }
