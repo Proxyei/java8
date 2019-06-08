@@ -1,6 +1,6 @@
 package com.xywei.java.inner_class;
 
-public class OuterInnerClass {
+public class OuterStaticInnerClass {
 
 	private String username = "外部类名字";
 	public String password = "外部类密码";
@@ -25,9 +25,8 @@ public class OuterInnerClass {
 		public void innerSay() {
 			System.out.println("我是内部类，名字:" + username + " 密码:" + password);
 			System.out.println("内部访问外部static成员变量：" + USER_LEVEL);
-			outerStaticSay();
-			System.out.println("内部访问外部成员变量，username:" + OuterInnerClass.this.username + " password:"
-					+ OuterInnerClass.this.password);
+			System.out.println("内部访问外部成员变量，username:" + OuterStaticInnerClass.this.username + " password:"
+					+ OuterStaticInnerClass.this.password);
 		}
 
 		// public static void staticSay() {
@@ -35,8 +34,30 @@ public class OuterInnerClass {
 			System.out.println("我是非静态成员内部类的静态方法");
 		}
 
+		public void getStaticInnerClass_staticInnerClassSay() {
+			StaticInnerClass.say();
+		}
+
 	}
 
-	
+	static class StaticInnerClass {
+
+		private String username = "静态成员内部类username";
+		public String password = "静态成员内部类password";
+
+		public void staticInnerClassSay() {
+			System.out.println("我是静态内部类，username:" + username + "password:" + password + ",外部类静态变量："
+					+ OuterStaticInnerClass.USER_LEVEL);
+		}
+
+		public static void say() {
+			System.out.println("我是静态成员内部类的静态方法");
+		}
+
+		public void getOuterStaticSay() {
+			outerStaticSay();
+		}
+
+	}
 
 }
