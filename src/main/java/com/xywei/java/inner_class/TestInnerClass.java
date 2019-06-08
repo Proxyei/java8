@@ -32,5 +32,15 @@ public class TestInnerClass {
 		StaticInnerClass.say();
 		
 	}
+	
+	@Test
+	public void testOuterLocalInnerClass() {
+		
+		OuterLocalInnerClass outerLocalInnerClass=new OuterLocalInnerClass();
+		outerLocalInnerClass.localInnerClassSay();
+		
+	}
+	
+	
 
 }

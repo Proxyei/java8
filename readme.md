@@ -51,4 +51,79 @@
 
    
 
-   **1.2 局部内部类**
+   **1.2 局部内部类（以下都默认内局部内部类）**
+
+   （1）类不能被static，public，protected，private修饰。
+
+   （2）局部内部类只能在定义该局部内部类的方法里面使用，并且必须是在内部类后面使用，如果再回调该方法，则会出现stackoverflow。
+
+   （3）通过调用外部类的方法达到使用局部内部类的效果。
+
+   ```java
+   		OuterLocalInnerClass outerLocalInnerClass=new OuterLocalInnerClass();
+   		outerLocalInnerClass.localInnerClassSay();
+   ```
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   

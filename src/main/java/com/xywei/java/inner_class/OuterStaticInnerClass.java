@@ -3,6 +3,7 @@ package com.xywei.java.inner_class;
 public class OuterStaticInnerClass {
 
 	private String username = "外部类名字";
+	private String username1 = "外部类名字";
 	public String password = "外部类密码";
 	public static String USER_LEVEL = "外部类水平1";
 
@@ -27,6 +28,8 @@ public class OuterStaticInnerClass {
 			System.out.println("内部访问外部static成员变量：" + USER_LEVEL);
 			System.out.println("内部访问外部成员变量，username:" + OuterStaticInnerClass.this.username + " password:"
 					+ OuterStaticInnerClass.this.password);
+			// 访问不同名的外部类变量
+			System.out.println("username1:" + username1);
 		}
 
 		// public static void staticSay() {
