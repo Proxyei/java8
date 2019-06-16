@@ -38,4 +38,9 @@ public class Employee {
 		this.sal = sal;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [age=" + age + ", name=" + name + ", sal=" + sal + "]";
+	}
+
 }
