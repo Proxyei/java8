@@ -11,7 +11,7 @@ import java.nio.ByteBuffer;
  * position：数据存放当前位置
  * limit：缓冲区中中可以操作数据的容量，position到limit之间的数据不可读写
  * capacity：缓冲区的最大容量
- * 1，0<=mark<=position<=limit<=capacity
+ * 1，-1<=mark<0<=position<=limit<=capacity
  * 2，基本类型中除了Blooean没有Buffer之外，其他都有。
  * ----
  * 写模式（程序数据写入buffer）：
